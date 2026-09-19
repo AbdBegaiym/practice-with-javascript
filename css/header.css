@@ -1,0 +1,86 @@
+
+/* Меню */
+
+.containerr {
+    max-width: 1110px;
+    margin: 0 auto;
+}
+
+.header {
+    background-color: #EDECF6;
+    width: 100%;
+}
+
+/* Контейнер внутри шапки (центрирует элементы внутри фоновой полосы) */
+.header__container {
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    
+    font-size: 16px;
+}
+
+
+/* Меню само расталкивает соседей и встает по центру */
+.header__menu {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header__list{
+    display: flex;
+
+    color: #fff;
+    text-decoration: none;
+}
+
+.header__list li {
+    margin: 0 30px;
+}
+
+.header__link {
+    color: #9F9EB6;
+    text-decoration: none;
+    
+    transition: text-shadow 0.2s ease;
+}
+
+.header__link:hover{
+    text-shadow: 0.4px 0 0 currentColor, -0.4px 0 0 currentColor;
+}
+
+.header__link:active {
+    color: #515076;
+}
+
+.header__logo {
+    display: inline-flex;
+    align-items: center;
+}
+
+.header__logo-img {
+    height: 60px;
+    width: auto;
+    object-fit: contain; /* Картинка не будет деформироваться */
+}
+
+
+.header__basket {
+    display: inline-flex;
+    align-items: center;
+}
+
+.header__basket-img {
+    height: 60px;
+    width: auto;
+    object-fit: contain; /* Картинка не будет деформироваться */
+    transition: transform 0.3s ease;
+}
+
+.header__basket-img:hover {
+    transform: scale(1.1);
+}
+
+.header__basket-img:active {
+    transform: scale(0.9);
+}

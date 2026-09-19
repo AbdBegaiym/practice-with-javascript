@@ -1,14 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Джаваскрипт</title>
+
+
+    <link rel="stylesheet" href="/css/card.css">
+    <link rel="stylesheet" href="/css/products.css">
+    <link rel="stylesheet" href="/css/compound.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
 </head>
 <body>
+    <header class="header"> <!--МЕНЮ-->
+        <div class="containerr header__container">
+            <a href="#" class="header__logo">
+                <img src="../images/logo.png" alt="Логотип компании" class="header__logo-img">
+            </a>
+
+            <nav class="header__menu">
+            <ul class="header__list clear-list">
+                <li><a href="#" class="header__link">Главная</a></li>
+                <li><a href="#" class="header__link">Каталог</a></li>
+                <li><a href="#" class="header__link">Контакты</a></li>
+            </ul>
+            </nav>
+
+            <a href="#" class="header__basket">
+                <img src="../images/basket.png" alt="Логотип компании" class="header__basket-img">
+            </a>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <h1 class="title">Выбери свой продукт</h1>
+        <div class="buttons-wrapper">
+            <button id="change-color-all-cards-btn">Сменить цвет всех карточек</button>
+            <button id="change-color-first-card-btn">Сменить цвет первой карточки</button>
+            <button id="open-google-btn">Открыть страницу Google</button>
+            <button id="output-console-log-btn">Вывести сообщение в консоль лог</button>
+            <button class="color-btn">Поменять цвет</button>
+        </div>
+
+        <ul id="products-list" class="products-list clear-list">
+
+            <template id="product-template">
+                <li class="product products__item">
+                    <img class="product__img" src="" alt="Изображение продукта"/>
+                    <span class="product__category"></span>
+                    <h2 class="product__name"></h2>
+
+                    <div class="product__rating">
+                        <div class="product__stars"></div>
+                        <span class="product__rating-value"></span>
+                    </div>
+
+                    <p class="product__description"></p>
+
+                    <div class="product__compounds">
+                        <span class="product__compounds-label">Состав:</span>
+
+                        <ul class="product__compounds-list">
+                            <li class="product__compound"></li>
+                            <li class="product__compound"></li>
+                            <li class="product__compound"></li>
+                        </ul>
+                    </div>
+
+                    <div class="product__price">
+                        <b class="product__price-label">Цена</b>
+                        <span class="product__price-value"></span>
+                    </div>
+                    <button class="product__buy-btn">Купить</button>
+                </li>
+            </template>
+        </ul>
+    </div>
+
     <script src="main.js"></script>
     <script src="homework-08.js"></script>
     <script type="module" src="homework-09.js"></script>
+    <script type="module" src="homework-10.js"></script>
 
 </body>
 </html>
