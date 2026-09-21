@@ -1,0 +1,77 @@
+
+.product {
+    background-color: #F7F7FA;
+    padding: 25px;
+    width: 100%;
+
+    box-sizing: border-box;
+}
+
+
+
+.product__img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* уберет лишний отступ снизу у картинок */
+    margin: 0 auto 30px auto;
+}
+
+
+.product__category {
+    font-size: 12px;
+    color: #A5A3B9;
+    text-transform: uppercase;
+}
+
+.product__price {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+}
+
+/*кнопка*/
+.product__buy-btn {
+    font-family: Montserrat, sans-serif;
+    color: #fff;
+    font-size: 20px;
+
+    background-color: #A5A3B9;
+    border: none;
+    width: 100%; /* Растянет кнопку ровно по ширине контента карточки */
+    padding: 15px 0;
+    border-radius: 3px;
+
+    margin-top: 30px;
+
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+}
+
+.product__buy-btn:hover {
+    background-color: #b4b2c7;
+    font-weight: 500;
+}
+
+.product__buy-btn:active {
+     background-color: #7a7690;
+}
+
+/*рейтинг*/
+.product__rating {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.product__stars {
+    color: #FFC107;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+.product__rating-value {
+    font-size: 20px;
+    color: #836e7d;
+}

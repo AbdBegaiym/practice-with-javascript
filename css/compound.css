@@ -1,0 +1,9 @@
+
+.product__compounds-list {
+    padding-left: 20px;
+    line-height: 18px;
+}
+
+.product__compounds-list li::marker {
+    font-size: 1.4em;
+}
