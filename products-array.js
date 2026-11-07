@@ -1,6 +1,6 @@
 export const productsArray = [
   {
-    img: 'images/photo_1.png',
+    img: 'photo_1',
     category: 'для нормальной кожи',
     name: 'Увлажняющий мусс',
 
@@ -15,7 +15,7 @@ export const productsArray = [
     price: 2750,
   },
   {
-    img: 'images/photo_2.png',
+    img: 'photo_2',
     category: 'для нормальной кожи',
     name: 'Увлажняющая маска',
 
@@ -30,7 +30,7 @@ export const productsArray = [
     price: 3500,
   },
   {
-    img: 'images/photo_3.png',
+    img: 'photo_3',
     category: 'для нормальной кожи',
     name: 'Гель для умывания',
 
@@ -45,7 +45,7 @@ export const productsArray = [
     price: 1650,
   },
   {
-    img: 'images/photo_4.png',
+    img: 'photo_4',
     category: 'для нормальной кожи',
     name: 'Подарочный набор №1',
 
@@ -60,7 +60,7 @@ export const productsArray = [
     price: 4750,
   },
   {
-    img: 'images/photo_5.png',
+    img: 'photo_5',
     category: 'для нормальной кожи',
     name: 'Подарочный набор №5',
 
