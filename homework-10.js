@@ -32,7 +32,7 @@ function renderProducts(products, count) {
   itemsToRender.forEach(product => {
     const productElement = productTemplate.content.cloneNode(true);
 
-    productElement.querySelector('.product__img').src = product.img;
+    productElement.querySelector('.product__img').src = `./images/${product.img}.png`;
     productElement.querySelector('.product__category').textContent = product.category;
     productElement.querySelector('.product__name').textContent = product.name;
     productElement.querySelector('.product__stars').textContent = product.ratingstars;
