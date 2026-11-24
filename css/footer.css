@@ -1,0 +1,268 @@
+/* Стили для футера (под существующий HTML) */
+.footer {
+    background-color: #252525;
+    color: #ffffff;
+    padding: 60px 0 30px;
+    margin-top: 60px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.footer__container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+/* Настройки блоков внутри футера */
+.footer__container > div {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.footer p {
+    font-size: 14px;
+    color: #b0b0b0;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+/* Заголовок формы */
+.footer__subscribe--title {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+/* Форма подписки (делаем её красивой прямоугольной плашкой как на макете) */
+.footer__form {
+    display: flex;
+    background-color: #ffffff;
+    border-radius: 6px;
+    overflow: hidden;
+    max-width: 420px;
+    margin-bottom: 15px;
+}
+
+.footer__input {
+    flex: 1;
+    border: none;
+    padding: 12px 16px;
+    font-size: 14px;
+    outline: none;
+    color: #333333;
+    background: transparent;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.footer__input::placeholder {
+    color: #888888;
+}
+
+/* Кнопка регистрации/подписки в футере из вашего HTML */
+.registr-button {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 24px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+.registr-button:hover {
+    background-color: #0056b3;
+}
+
+/* Быстрые ссылки в футере */
+.footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer ul li {
+    font-size: 14px;
+    color: #b0b0b0;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.footer ul li:hover {
+    color: #ffffff;
+}
+
+/* Класс доступности, если используется */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+/* Стили для модального окна и оверлея */
+
+/* По умолчанию модальное окно скрыто */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none; /* скрываем, пока нет класса modal-showed */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Когда добавляется класс modal-showed — окно показывается */
+.modal.modal-showed {
+    display: flex;
+}
+
+/* Задний фон (темный, но не полностью черный, согласно правилам) */
+.modal__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); 
+}
+
+/* Само модальное окно (строго по центру, независимо от масштаба) */
+.modal__content {
+    position: relative;
+    background-color: #ffffff;
+    color: #333333;
+    padding: 35px 35px 35px 35px; /* Строго одинаковые отступы со всех сторон */
+    border-radius: 12px;
+    width: 100%;
+    max-width: 500px;
+    box-sizing: border-box; 
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    z-index: 1001;
+    max-height: 90vh;
+    overflow-y: auto;
+    font-family: 'Montserrat', sans-serif;
+    text-align: left; /* Чтобы заголовки и текст были выровнены по левому краю */
+}
+
+/* Центрируем саму форму и выравниваем её элементы по ширине */
+.modal__content .registration-form {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Кнопка закрытия (крестик в углу) */
+.modal__close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #888888;
+    transition: color 0.3s ease;
+}
+
+.modal__close:hover {
+    color: #000000;
+}
+
+/* Крестик через псевдоэлементы или символ, если внутри пусто */
+.modal__close::after {
+    content: "✕";
+}
+
+/* Заголовки и тексты внутри модалки */
+.modal__title {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.modal__description {
+    font-size: 14px;
+    color: #666666;
+    margin-bottom: 20px;
+}
+
+/* Стили формы регистрации внутри модалки */
+.registration-form__row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+/* Делаем так, чтобы поля ввода внутри формы занимали всю доступную ширину равномерно */
+.registration-form__field {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.registration-form__label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #444444;
+}
+
+.registration-form__input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 14px;
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
+    transition: border-color 0.3s ease;
+}
+
+.registration-form__input:focus {
+    border-color: #007bff;
+}
+
+/* Кнопка отправки формы регистрации */
+.registration-form__submit {
+    width: 100%;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    padding: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.registration-form__submit:hover {
+    background-color: #0056b3;
+}
